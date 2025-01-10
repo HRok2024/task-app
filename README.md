@@ -1,8 +1,32 @@
-# React + Vite
+# Task-app - 할 일 관리 웹 애플리케이션
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 프로젝트는 사용자가 할 일을 추가하고, 진행 중인 작업을 관리할 수 있는 **할 일 관리 웹 애플리케이션**입니다. 사용자는 할 일을 입력하고, 진행 상태를 변경하거나 태그를 추가하여 효율적으로 작업을 관리할 수 있습니다. 이 웹 애플리케이션은 `Vite`로 생성된 리액트 앱입니다.
 
-Currently, two official plugins are available:
+## 🚀 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **할 일 추가**: 사용자가 할 일을 입력하고 상태(`할일`, `진행중`, `완료`)와 태그(HTML, CSS, JavaScript, React)를 클릭하여 추가할 수 있습니다.
+- **할 일 상태 관리**: 추가된 할 일은 상태에 따라 "할 일", "진행중", "완료"로 나뉘어 관리됩니다.
+- **태그 기능**: 할 일에 태그를 추가하여 태그와 관련된 할일을 쉽게 구분할 수 있습니다.
+- **삭제 기능**: 각 할 일에는 삭제 버튼이 있어 필요하지 않은 항목을 제거할 수 있습니다.
+- **로컬 스토리지**: 사용자가 입력한 할 일은 로컬 스토리지에 저장되어 페이지 새로고침 후에도 유지됩니다.
+
+## 🌐 배포
+
+이 프로젝트는 **Netlify**에 배포되었습니다. 아래 링크에서 사이트를 확인할 수 있습니다.
+
+- [Task Manager 웹앱 배포 링크](https://cheerful-dragon-60e619.netlify.app/)
+
+## 🧑‍💻 기술 스택
+
+- **React**: 사용자 인터페이스 구성
+- **Vite**: 빠른 빌드 도구
+- **CSS**: 스타일링 (각 컴포넌트 별로 CSS 모듈 사용)
+- **로컬 스토리지**: 할 일 목록을 로컬 스토리지에 저장하여 새로 고침 후에도 데이터를 유지
+
+## 🎥 주요 컴포넌트
+
+- **App.jsx**: 할 일 관리 애플리케이션의 전체적인 로직을 담당하며, 할 일 목록을 로컬 스토리지에 저장합니다.
+- **TaskForm.jsx**: 사용자가 할 일을 입력하고, 상태와 태그를 설정하는 폼입니다.
+- **TaskColumn.jsx**: 각 상태(할 일, 진행 중, 완료)에 해당하는 할 일을 나누어 표시하는 컴포넌트입니다.
+- **TaskCard.jsx**: 각 할 일 항목을 표시하고 삭제할 수 있는 개별 카드입니다.
+- **Tag.jsx**: 할 일 항목에 추가할 수 있는 태그 컴포넌트로, 선택된 태그에 따라 색상이 달라집니다.
